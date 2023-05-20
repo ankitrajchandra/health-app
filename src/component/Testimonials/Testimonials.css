@@ -1,0 +1,155 @@
+.Testimonials {
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.left-t {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.left-t>:nth-child(1) {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.left-t>:nth-child(2),
+.left-t>:nth-child(3) {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.review {
+    text-transform: none;
+    letter-spacing: 2px;
+    line-height: 40px;
+    text-align: justify;
+}
+
+.right-t {
+    flex: 1;
+
+    position: relative;
+    /* childs are given absolute */
+}
+
+.right-t>img {
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+    object-fit: cover;
+    right: 12rem;
+    top: 2rem;
+}
+
+.right-t>:nth-child(1) {
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+    border: 2px solid var(--green);
+    background-color: transparent;
+    right: 13rem;
+    top: 1rem;
+}
+
+.right-t>:nth-child(2) {
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+    /* border: 2px solid var(--orange); */
+    background: var(--planCard);
+    right: 10.7rem;
+    top: 3.3rem;
+}
+
+.arrows {
+    display: flex;
+    gap: 1rem;
+
+    position: absolute;
+    left: 5rem;
+    bottom: 1rem;
+}
+
+.arrows>img {
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    .Testimonials {
+        flex-direction: column;
+    }
+
+    .left-t {
+        gap: 1rem;
+    }
+
+    .left-t>:nth-child(2),
+    .left-t>:nth-child(3) {
+        font-size: xx-large;
+    }
+
+    .left-t>:nth-child(4) {
+        letter-spacing: 1px;
+    }
+
+    .right-t{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+    }
+
+    .right-t>div{
+        display: none;
+    }
+
+    .right-t>img{
+       position: relative;
+       align-self: center;
+       top: 0;
+       right: 0;
+    }
+
+    .right-t>:last-child{
+        position: relative;
+        display: block;
+        bottom: 0;
+        left: 0;
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1200px) {
+
+    .right-t{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        right: -7.5rem;
+
+    }
+
+    .right-t>:last-child{
+        position: relative;
+        display: block;
+        top: 11.7rem;
+        left: -5rem;
+    }
+
+}
